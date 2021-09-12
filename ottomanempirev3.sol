@@ -954,7 +954,7 @@ string[] private EkonomikListe = [
         string memory output = string(abi.encodePacked(parts[0], parts[1], parts[2], parts[3], parts[4], parts[5], parts[6], parts[7], parts[8]));
         output = string(abi.encodePacked(output, parts[9], parts[10], parts[11], parts[12], parts[13], parts[14], parts[15]));
         
-        string memory json = Base64.encode(bytes(string(abi.encodePacked('{"name": "Card #', toString(tokenId), '", "Description: This is an awareness of history. This NFT is a hub, feel free to build on it.", "image": "data:image/svg+xml;base64,', Base64.encode(bytes(output)), '"}'))));
+        string memory json = Base64.encode(bytes(string(abi.encodePacked('{"name": "Card #', toString(tokenId), '", "Description": "This is an awareness of history. This NFT is a hub, feel free to build on it.", "image": "data:image/svg+xml;base64,', Base64.encode(bytes(output)), '"}'))));
         output = string(abi.encodePacked('data:application/json;base64,', json));
 
         return output;
